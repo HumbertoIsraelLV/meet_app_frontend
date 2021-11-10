@@ -12,6 +12,7 @@ const ModalForGames = ({roomId, identity, isRoomHost}) => {
       console.log(await addNPoints(roomId, identity, 1));
     }
 
+    //DESCOMENTAR CUANDO SE TENGA EL MECANISMO PARA DISPONER LOS JUEGOS.
     // useEffect(()=>{
     //     if(!isRoomHost){
     //       setTimeout(()=>{

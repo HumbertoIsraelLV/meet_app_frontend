@@ -12,3 +12,9 @@ export const addNPoints = async (roomId, identity, points) => {
     const response = await axios.get(`${serverApi}/add-points?roomId=${roomId}&identity=${identity}&points=${points}`);
     return response.data;
 };
+
+export const getScores = async () => {
+    const response = await axios.get(`${serverApi}/get-scores`);
+    console.log(response.data);
+    return response.data;
+};
