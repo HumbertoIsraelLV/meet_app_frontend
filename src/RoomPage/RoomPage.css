@@ -421,7 +421,7 @@ video {
 .label_only_audio_container {
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: -1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -533,4 +533,29 @@ video {
   margin-bottom: 5px;
   font-size: 14px;
   margin-right: 5px;
+}
+
+
+/* MODAL */
+.custom_modal {
+  top: 50%;
+  left: 50%;
+  z-index: auto;
+  outline: none;
+  padding: 25px;
+  overflow: auto;
+  position: fixed;
+  border-radius: 3px;
+  transform: translate(-50%, -50%);
+  background: rgb(236, 233, 233);    
+}
+
+.custom_overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: auto;
+  position: fixed;    
+  background-color: rgba(0, 0, 0, 0.78);
 }

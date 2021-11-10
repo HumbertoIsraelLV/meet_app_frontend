@@ -8,6 +8,7 @@ import "./RoomPage.css";
 import RoomLabel from "./RoomLabel";
 import * as webRTCHandler from "../utils/webRTCHandler.js";
 import Overlay from "./VideoSection/Overlay";
+import ModalForGames from "./Modal/ModalForGames";
 
 const RoomPage = ({roomId, identity, isRoomHost, showOverlay, connectOnlyWithAudio}) => {
     
@@ -28,6 +29,7 @@ const RoomPage = ({roomId, identity, isRoomHost, showOverlay, connectOnlyWithAud
     }, []);
 
     return (
+        <>
         <div className="room_container">
             <ParticipantsSection/>
             <VideoSection/>
@@ -35,6 +37,8 @@ const RoomPage = ({roomId, identity, isRoomHost, showOverlay, connectOnlyWithAud
             <RoomLabel roomId={roomId}/>
             {showOverlay && <Overlay /> }
         </div>
+        <ModalForGames/>
+        </>
     );
 };
 
