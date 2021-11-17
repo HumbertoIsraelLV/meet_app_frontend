@@ -15,6 +15,5 @@ export const addNPoints = async (roomId, identity, points) => {
 
 export const getScores = async () => {
     const response = await axios.get(`${serverApi}/get-scores`);
-    console.log(response.data);
     return response.data;
 };

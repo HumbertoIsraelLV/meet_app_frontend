@@ -1,0 +1,17 @@
+div.memorama-main{
+    justify-content: center;    
+    width: 100%;
+}
+div.memorama-title{
+    background-color: rgb(65, 170, 219);
+}
+/* div.result{
+    font-size: 2rem;
+    padding: 10px;
+} */
+div.result.green{
+    background-color: #5a5;
+}
+div.result.red{
+    background-color: rgb(206, 104, 104);
+}
