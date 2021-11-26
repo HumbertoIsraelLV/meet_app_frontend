@@ -107,10 +107,10 @@ class Hangman extends Component {
                   {/* <button className='btn btn-info' onClick={this.resetButton}>Limpiar</button> */}
               </div>
               {(gameStat===1) &&
-              <Result isWinner={true} points={4}/>
+              <Result isWinner={true}/>
               }
               {(gameStat===2) &&
-              <Result isWinner={false} points={2}/>
+              <Result isWinner={false}/>
               }
           </div>
       )

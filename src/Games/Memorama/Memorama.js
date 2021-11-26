@@ -6,6 +6,7 @@ import Board from './Board/Board';
 import './Memorama.css';
 const emojiList = [...'🍉🐶🎵👽'];
 
+var flag=false;
 var movements = 0;
 var pairs = 0; 
 const Memorama = ({student}) => {
@@ -18,6 +19,7 @@ const Memorama = ({student}) => {
     setShuffledMemoBlocks(shuffledEmojiList.map( (emoji, i) => ({ index: i, emoji, flipped: false}) ));
     pairs=0;
     movements=0;
+    flag=true;
   }, []);
 
   const shuffleArray = a => {
@@ -39,9 +41,10 @@ const Memorama = ({student}) => {
         setselectedMemoBlock(memoBlock);
       } else if(selectedMemoBlock.emoji === memoBlock.emoji) {
         pairs=pairs+1;
-        if(pairs===4){
+        if(pairs===4 && flag){
           addNPoints(student.roomId, student.identity, 2)
           console.log("Ganaste");
+          flag=false;
         }
         setselectedMemoBlock(null);
       } else {
@@ -57,8 +60,11 @@ const Memorama = ({student}) => {
       
     }
     if(movements===14){
-        addNPoints(student.roomId, student.identity, 1);
-        console.log("Perdiste");
+        if(flag){
+          addNPoints(student.roomId, student.identity, 1);
+          console.log("Perdiste");
+          flag=false;
+        }
         movements++; 
     }
   }

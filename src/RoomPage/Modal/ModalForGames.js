@@ -21,22 +21,22 @@ const ModalForGames = ({roomId, identity, isRoomHost}) => {
 
     const chooseGame = () => {
       const games = [
-        // <Memorama student={student}/>,
-        // <Memorama student={student}/>,
-        // <Memorama student={student}/>,
-        // <Memorama student={student}/>,
+        <Memorama student={student}/>,
+        <Memorama student={student}/>,
+        <Memorama student={student}/>,
+        <Memorama student={student}/>,
         <Gato student={student} />,
         <Gato student={student} />,
         <Gato student={student} />,
         <Gato student={student} />,
-        // <Preguntas student={student}/>,
-        // <Preguntas student={student}/>,
-        // <Preguntas student={student}/>,
-        // <Preguntas student={student}/>,
-        // <Hangman student={student} />,
-        // <Hangman student={student} />,
-        // <Hangman student={student} />,
-        // <Hangman student={student} />,
+        <Preguntas student={student}/>,
+        <Preguntas student={student}/>,
+        <Preguntas student={student}/>,
+        <Preguntas student={student}/>,
+        <Hangman student={student} />,
+        <Hangman student={student} />,
+        <Hangman student={student} />,
+        <Hangman student={student} />,
       ];  
       const index = Math.floor(Math.random() * 4);
       game = games[index];
@@ -48,7 +48,7 @@ const ModalForGames = ({roomId, identity, isRoomHost}) => {
           await setTimeout(()=>{
               chooseGame();
               setIsOpen(true);
-          // }, 1000*(Math.floor(Math.random() * 60))+60);
+          // }, 1000*(Math.floor(Math.random() * 60))+60*5);
           }, 5000);
         }else{
           if(isOpen){
