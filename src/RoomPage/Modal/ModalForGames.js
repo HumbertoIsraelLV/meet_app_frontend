@@ -48,8 +48,8 @@ const ModalForGames = ({roomId, identity, isRoomHost}) => {
           await setTimeout(()=>{
               chooseGame();
               setIsOpen(true);
-          // }, 1000*(Math.floor(Math.random() * 60))+60*5);
-          }, 5000);
+          }, 1000 * (Math.floor(Math.random() * (25 * 60))) + 60 * 5);
+          // }, 5000);
         }else{
           if(isOpen){
             await setTimeout(()=>{
