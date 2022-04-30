@@ -43,22 +43,27 @@ const ModalForGames = ({roomId, identity, isRoomHost}) => {
 
     };
 
-    useEffect(async () =>{
+    useEffect(() =>{
+
+      async function handleGame() {
         if(!isRoomHost && !isOpen){
           await setTimeout(()=>{
               chooseGame();
               setIsOpen(true);
-          }, 1000 * (Math.floor(Math.random() * (25 * 60))) + 60 * 5);
-          // }, 1000 * (Math.floor(Math.random() * (4 * 60))) + 60);
+          // }, 1000 * (Math.floor(Math.random() * (25 * 60))) + 60 * 5);
+          }, 1000 * (Math.floor(Math.random() * (4 * 60))) + 60);
+          // }, 1000 * (Math.floor(Math.random() * (1 * 60))) + 60);
           // }, 5000);
-        }else{
-          if(isOpen){
-            await setTimeout(()=>{
-                addNPoints(roomId, identity, 0);
-                setIsOpen(false);
-            }, 20000);
+          }else{
+            if(isOpen){
+              await setTimeout(()=>{
+                  addNPoints(roomId, identity, 0);
+                  setIsOpen(false);
+              }, 20000);
+            }
           }
         }
+        handleGame();
       }, [isOpen]);
 
       return (

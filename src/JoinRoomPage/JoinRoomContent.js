@@ -12,10 +12,16 @@ import { getRoomExists } from "../utils/api";
 import ErrorMessage from "./ErrorMessage";
 import JoinRoomButtons from "./JoinRoomButtons";
 import JoinRoomInputs from "./JoinRoomInputs";
-import OnlyWithAudioCheckbox from "./OnlyWithAudioCheckbox";
+// import OnlyWithAudioCheckbox from "./OnlyWithAudioCheckbox";
 
 const JoinRoomContent = (props) => {
-    const {isRoomHost, setConnectOnlyWithAudio, connectOnlyWithAudio, setIdentityAction, setRoomIdAction} = props;
+    const {
+        isRoomHost, 
+        // setConnectOnlyWithAudio, 
+        // connectOnlyWithAudio, 
+        setIdentityAction, 
+        setRoomIdAction
+    } = props;
     const [roomIdValue, setRoomIdValue] = useState("");
     const [nameValue, setNameValue] = useState("");
     const [errorMessage, setErrorMessage] = useState(null);
@@ -37,7 +43,7 @@ const JoinRoomContent = (props) => {
         const {roomExists, full} = responseMessage;
         if(roomExists){
             if(full){
-                setErrorMessage("Meeting is full. Please try again later.");
+                setErrorMessage("Cupo de asistentes lleno. Intenta más tarde.");
             }else{
                 //Join a room
                 //Save the room id in our redux store
@@ -45,7 +51,7 @@ const JoinRoomContent = (props) => {
                 history.push("/room");
             }
         }else{
-            setErrorMessage("Room not found. Check your meeting id");
+            setErrorMessage("Reunión no encontrada. Revisa tu ID de reunión.");
         }
         
     }
@@ -65,10 +71,10 @@ const JoinRoomContent = (props) => {
                 setNameValue={setNameValue}
                 isRoomHost={isRoomHost}
             />
-            <OnlyWithAudioCheckbox 
+            {/* <OnlyWithAudioCheckbox 
                 setConnectOnlyWithAudio={setConnectOnlyWithAudio}
                 connectOnlyWithAudio={connectOnlyWithAudio}
-             />
+             /> */}
             <ErrorMessage 
                 errorMessage={errorMessage}
             />

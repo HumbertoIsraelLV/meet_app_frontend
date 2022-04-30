@@ -12,7 +12,7 @@ const LeaveRoomButton = () => {
                 className="video_button_end"
                 alt=""
             >
-                Leave Room
+                Dejar reunión
             </button>
         </div>
     );

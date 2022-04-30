@@ -8,7 +8,7 @@ const Result = ({isWinner, points}) => {
         <div className={isWinner?"result green": "result red"}>
           <blockquote class="blockquote text-center">
             <p class="mb-4">{isWinner?"¡GANASTE!":"PERDISTE"}</p>
-            <footer class="blockquote-footer text-white">Acumulas {final_points} {final_points==1?"punto":"puntos"}</footer>
+            <footer class="blockquote-footer text-white">Acumulas {final_points} {final_points===1?"punto":"puntos"}</footer>
           </blockquote> 
         </div>
     );

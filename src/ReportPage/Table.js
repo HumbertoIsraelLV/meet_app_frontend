@@ -1,11 +1,11 @@
 import React from "react";
 
 const Tables = ({ sessions }) => {
-    const columns = ["#", "Session Date", "Session Hour", "Teacher Name", "Students"];
+    const columns = ["#", "Fecha de la reunión", "Hora de la reunión", "Nombre del profesor", "Estudiantes"];
     return (
     <>
         <row>
-            <h1>Sessions Scores</h1>
+            <h1>Puntajes de las reuniones</h1>
         </row>
         <row>
             <table className="table table-striped table-bordered">
@@ -22,8 +22,8 @@ const Tables = ({ sessions }) => {
                     <td>
                         <table className="table">
                             <thead>
-                            <th>Name</th>
-                            <th>Score</th>
+                            <th>Nombre</th>
+                            <th>Puntaje</th>
                             </thead>
                             <tbody>
                             {session["students"].map((student) => 

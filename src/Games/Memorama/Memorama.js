@@ -73,10 +73,10 @@ const Memorama = ({student}) => {
     <div className="memorama-main">
         <GameTitle title="MEMORAMA" instructions="Encuentra todos los pares."/>
       <Board memoBlocks={shuffledMemoBlocks} animating={animating}  handleMemoClick={handleMemoClick} />
-      {pairs==4 &&
+      {pairs===4 &&
         <Result isWinner={true}/>
       } 
-      {(movements>=14 && pairs!=4) && 
+      {(movements>=14 && pairs!==4) && 
         <Result isWinner={false}/>
       }
     </div>

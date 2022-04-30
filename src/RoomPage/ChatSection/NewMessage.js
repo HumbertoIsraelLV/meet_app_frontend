@@ -11,7 +11,7 @@ const NewMessage = () => {
     };
 
     const handleKeyPressed = (event) => {
-        if(event.key == "Enter"){
+        if(event.key === "Enter"){
             event.preventDefault();
 
             console.log("sending message to others"); 
@@ -31,7 +31,7 @@ const NewMessage = () => {
                 className="new_message_input"
                 value={message}
                 onChange={handleTextChange}
-                placeholder="Type your message"
+                placeholder="Escribe tu mensaje"
                 type="text"
                 onKeyDown={handleKeyPressed}
             />

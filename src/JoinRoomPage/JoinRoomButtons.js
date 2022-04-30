@@ -12,7 +12,7 @@ const Button = ({buttonText, cancelButton = false, onClickHandler}) => {
 }
 
 const JoinRoomButtons = ({handleJoinRoom, isRoomHost}) => {
-    const successButtonText = isRoomHost? "Host" : "Join"
+    const successButtonText = isRoomHost? "Iniciar" : "Unirse"
     const history = useHistory();
 
     const pushToIntrodutionPage = () => {
@@ -26,7 +26,7 @@ const JoinRoomButtons = ({handleJoinRoom, isRoomHost}) => {
                 onClickHandler={handleJoinRoom}
             />
             <Button 
-                buttonText={"Cancel"}
+                buttonText={"Cancelar"}
                 cancelButton
                 onClickHandler={pushToIntrodutionPage}
             />

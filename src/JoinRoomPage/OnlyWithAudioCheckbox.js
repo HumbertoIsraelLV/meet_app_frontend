@@ -17,7 +17,7 @@ const OnlyWithAudioCheckbox = ({
                 {connectOnlyWithAudio &&
                     (<img className="checkbox_image" src={CheckImg} alt=""/>)} 
             </div>
-            <p className="checkbox_container_paragraph">Only audio</p>
+            <p className="checkbox_container_paragraph">Solo audio</p>
         </div>
     );
 };

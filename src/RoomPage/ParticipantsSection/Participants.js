@@ -2,7 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 
 const SingleParticipant = (props) => {
-    const {identity, lastItem, participant} = props;
+    const {identity, lastItem, 
+        // participant
+    } = props;
     return (
         <>
             <p className="participants_paragraph">{identity}</p>

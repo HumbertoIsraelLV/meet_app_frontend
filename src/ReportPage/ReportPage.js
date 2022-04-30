@@ -25,7 +25,7 @@ const ReportPage = () => {
         });
     };
     useEffect(() => {
-        if(isLoading==true){
+        if(isLoading===true){
             generateTables();
         }
     }, [isLoading]);

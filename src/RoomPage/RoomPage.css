@@ -50,7 +50,7 @@
 
 .new_message_button {
   position: absolute;
-  right: 10%;
+  right: 18%;
 }
 
 .messages_container {
@@ -335,13 +335,31 @@ video {
   z-index: 4;
 }
 
-.room_label_paragraph {
-  font-size: 17px;
+/* .room_label_copy {
+  background-color: #eb484800;
+  border: none;
+  fill: white;
   color: white;
-  margin-top: 0;
-  padding: 18px 38px;
+  padding: 12px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+} */
+
+
+.room_label_paragraph {
+  /* border: none; */
+  /* font-size: 17px; */
+  display: flex;
+  border: none;
+  color: white;
+  padding: 10px 20px;
   background: linear-gradient(168.68deg, #0052c9 1.12%, #0a91db 100%);
   border-radius: 0px 0px 15px 15px;
+}
+.room_label_paragraph p {
+  margin: auto;
 }
 
 .video_track_container:first-child:nth-last-child(1) {

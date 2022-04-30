@@ -4,10 +4,10 @@ import SwitchImg from "./../../resources/images/switchToScreenSharing.svg";
 import LocalScreenSharingPreview from "./LocalScreenSharingPreview";
 import * as webRTCHandler from "../../utils/webRTCHandler";
 
-const constrainsts = {
-    audio: false,
-    video: true
-};
+// const constrainsts = {
+//     audio: false,
+//     video: true
+// };
 
 const SwitchToScreenSharingButton = () => {
     const [isScreenSharingActive, setIsScreenSharingActive] = useState(false);
